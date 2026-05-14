@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "download_lux_energy_statec"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7411744f-87c6-a900-4f12-4080700cc79e"
+  }
+}

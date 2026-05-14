@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "bronze_lux_energy_price"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c0cc32e0-5934-9001-4f05-ff9a5cfd1c0c"
+  }
+}

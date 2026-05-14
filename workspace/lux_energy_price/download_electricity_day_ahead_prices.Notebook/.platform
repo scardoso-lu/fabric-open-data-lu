@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "download_electricity_day_ahead_prices"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7f35b126-d1d9-a910-4666-459615a8b257"
+  }
+}

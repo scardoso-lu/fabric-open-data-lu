@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "bronze_lux_energy_statec"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "29e5dac4-6e1c-8407-46ec-07025e30b534"
+  }
+}

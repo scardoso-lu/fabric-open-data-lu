@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "download_lux_energy_price"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1bc3bb43-70f7-9240-4261-57128da849e4"
+  }
+}
