@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "download_jaffle_shop"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "df2a82e9-9d89-b43d-4d8c-9db026dbf679"
+  }
+}

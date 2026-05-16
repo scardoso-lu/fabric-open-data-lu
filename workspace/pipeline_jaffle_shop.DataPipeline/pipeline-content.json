@@ -1,0 +1,212 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "df2a82e9-9d89-b43d-4d8c-9db026dbf679",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "WAREHOUSE_HOST": {
+              "value": "ptp6m2eciudepjjrr3dc25rfpy-mhqll7zehbvurk34vlxwciquam.datawarehouse.fabric.microsoft.com",
+              "type": "string"
+            },
+            "WAREHOUSE": {
+              "value": "DATA_WAREHOUSE",
+              "type": "string"
+            },
+            "LAKEHOUSE": {
+              "value": "DATALAKE",
+              "type": "string"
+            },
+            "DBT_REPO_URL": {
+              "value": "https://github.com/scardoso-lu/jaffle-shop-classic.git",
+              "type": "string"
+            },
+            "DATA_BASE_URL": {
+              "value": "https://raw.githubusercontent.com/scardoso-lu/jaffle-shop-classic/main/seeds",
+              "type": "string"
+            },
+            "SANDBOX_DIR": {
+              "value": "Files/data/sandbox/jaffle_shop",
+              "type": "string"
+            },
+            "DBT_DIR": {
+              "value": "/tmp/jaffle_shop_dbt",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "run_download_jaffle_shop",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "497769df-07e0-9ca1-4310-40e9bf837c92",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "WAREHOUSE_HOST": {
+              "value": "ptp6m2eciudepjjrr3dc25rfpy-mhqll7zehbvurk34vlxwciquam.datawarehouse.fabric.microsoft.com",
+              "type": "string"
+            },
+            "WAREHOUSE": {
+              "value": "DATA_WAREHOUSE",
+              "type": "string"
+            },
+            "LAKEHOUSE": {
+              "value": "DATALAKE",
+              "type": "string"
+            },
+            "DBT_REPO_URL": {
+              "value": "https://github.com/scardoso-lu/jaffle-shop-classic.git",
+              "type": "string"
+            },
+            "DATA_BASE_URL": {
+              "value": "https://raw.githubusercontent.com/scardoso-lu/jaffle-shop-classic/main/seeds",
+              "type": "string"
+            },
+            "SANDBOX_DIR": {
+              "value": "Files/data/sandbox/jaffle_shop",
+              "type": "string"
+            },
+            "DBT_DIR": {
+              "value": "/tmp/jaffle_shop_dbt",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "run_bronze_jaffle_shop",
+        "dependsOn": [
+          {
+            "activity": "run_download_jaffle_shop",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "bc06e0fa-6f2b-82f5-4f92-fd7ea34a2dd8",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "WAREHOUSE_HOST": {
+              "value": "ptp6m2eciudepjjrr3dc25rfpy-mhqll7zehbvurk34vlxwciquam.datawarehouse.fabric.microsoft.com",
+              "type": "string"
+            },
+            "WAREHOUSE": {
+              "value": "DATA_WAREHOUSE",
+              "type": "string"
+            },
+            "LAKEHOUSE": {
+              "value": "DATALAKE",
+              "type": "string"
+            },
+            "DBT_REPO_URL": {
+              "value": "https://github.com/scardoso-lu/jaffle-shop-classic.git",
+              "type": "string"
+            },
+            "DATA_BASE_URL": {
+              "value": "https://raw.githubusercontent.com/scardoso-lu/jaffle-shop-classic/main/seeds",
+              "type": "string"
+            },
+            "SANDBOX_DIR": {
+              "value": "Files/data/sandbox/jaffle_shop",
+              "type": "string"
+            },
+            "DBT_DIR": {
+              "value": "/tmp/jaffle_shop_dbt",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "run_create_jaffle_shop_views",
+        "dependsOn": [
+          {
+            "activity": "run_bronze_jaffle_shop",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "eb535e25-d553-a9ed-495a-c6ef36721f27",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "WAREHOUSE_HOST": {
+              "value": "ptp6m2eciudepjjrr3dc25rfpy-mhqll7zehbvurk34vlxwciquam.datawarehouse.fabric.microsoft.com",
+              "type": "string"
+            },
+            "WAREHOUSE": {
+              "value": "DATA_WAREHOUSE",
+              "type": "string"
+            },
+            "LAKEHOUSE": {
+              "value": "DATALAKE",
+              "type": "string"
+            },
+            "DBT_REPO_URL": {
+              "value": "https://github.com/scardoso-lu/jaffle-shop-classic.git",
+              "type": "string"
+            },
+            "DATA_BASE_URL": {
+              "value": "https://raw.githubusercontent.com/scardoso-lu/jaffle-shop-classic/main/seeds",
+              "type": "string"
+            },
+            "SANDBOX_DIR": {
+              "value": "Files/data/sandbox/jaffle_shop",
+              "type": "string"
+            },
+            "DBT_DIR": {
+              "value": "/tmp/jaffle_shop_dbt",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "run_dbt_jaffle_shop",
+        "dependsOn": [
+          {
+            "activity": "run_create_jaffle_shop_views",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ],
+    "annotations": []
+  }
+}

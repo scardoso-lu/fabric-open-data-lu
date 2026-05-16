@@ -1,0 +1,2 @@
+-- Auto Generated (Do not modify) B8096CEFFDD28F7F5A248C21CCF799A9C27E38C49FD6FC86E73B7DC5F3CD2D2C
+CREATE   VIEW dbo.[raw_customers] AS SELECT * FROM [DATALAKE].[dbo].[jaffle_raw_customers]

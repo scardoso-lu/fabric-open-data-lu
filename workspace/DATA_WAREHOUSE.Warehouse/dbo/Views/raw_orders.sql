@@ -1,0 +1,2 @@
+-- Auto Generated (Do not modify) E2DBECA71A1CF6CDF212F4B9448E534467F516D39B6285EBF3623B04E290603A
+CREATE   VIEW dbo.[raw_orders] AS SELECT * FROM [DATALAKE].[dbo].[jaffle_raw_orders]
