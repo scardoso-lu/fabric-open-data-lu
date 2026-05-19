@@ -1,2 +1,0 @@
--- Auto Generated (Do not modify) 8B1D8F8AC356E9577AB6D2AE7ACCBA23C70259376110E7DBC8CB1623E3079630
-CREATE   VIEW dbo.[raw_payments] AS SELECT * FROM [DATALAKE].[dbo].[jaffle_raw_payments]
